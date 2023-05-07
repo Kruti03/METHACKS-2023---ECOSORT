@@ -225,7 +225,7 @@ while not game_over and chance > 0 and start == 1:
     if high_score < score:
         high_score_text = FONT_MEDIUM.render(f'High Score: {high_score}', True, BLACK)
         high_score = score
-        SCREEN.blit(high_score, (10, 10))
+       # SCREEN.blit(high_score, (10, 10))
 
     # Draw lives
     live_text = FONT_MEDIUM.render(f'lives: {chance}', True, BLACK)
@@ -252,6 +252,7 @@ while not game_over and chance > 0 and start == 1:
                     elif event.key == pygame.K_RETURN:
                         game_over = False
                         chance = 3
+                        score = 0
                         break
 
             game_over_text = FONT_LARGE.render('Game Over', True, BLACK)
